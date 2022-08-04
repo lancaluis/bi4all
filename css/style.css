@@ -1,31 +1,112 @@
 @import url(reset.css);
 @import url(colors.css);
 
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+
+html,
 body {
-  display: flex;
-  flex-direction: column;
+  overflow-x: hidden;
   height: 100%;
+  font-family: "Varela Round", sans-serif;
 }
 
 header {
   display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background: rgb(127, 255, 212);
+  align-items: center;
+  padding: 0 2rem;
+  background: #f1f1f1;
+  height: 60px;
 }
 
-nav {
-  display: flex;
-  gap: 1rem;
-  justify-content: space-around;
+sidebar {
+  height: 100%;
+  position: fixed;
+  right: 0;
+  width: 250px;
+  transform: translateX(250px);
+  transition: transform 250ms ease-in-out;
+  background: #f1f1f1;
+  padding: 1rem 2rem;
 }
 
 main {
-  padding: 1rem;
-  background: rgb(21, 57, 45);
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
 }
 
-footer {
-  padding: 1rem;
-  background: rgb(26, 85, 65);
+input[type="checkbox"]:checked ~ sidebar {
+  transform: translateX(0);
+}
+
+input[type="checkbox"] {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  display: none;
+}
+
+.sidebarIconToggle {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  top: 22px;
+  right: 15px;
+  height: 22px;
+  width: 22px;
+}
+
+.spinner {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #1f1f1f;
+}
+
+.horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+
+.diagonal.part-1 {
+  position: relative;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  float: left;
+}
+
+.diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(135deg);
+  margin-top: 8px;
+}
+
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(-135deg);
+  margin-top: -9px;
 }
