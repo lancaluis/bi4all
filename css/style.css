@@ -1,0 +1,31 @@
+@import url(reset.css);
+@import url(colors.css);
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgb(127, 255, 212);
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+main {
+  padding: 1rem;
+  background: rgb(21, 57, 45);
+}
+
+footer {
+  padding: 1rem;
+  background: rgb(26, 85, 65);
+}
