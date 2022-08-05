@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
+    <title>Sistema X</title>
   </head>
   <body>
     <header>
-      <p>brand</p>
+      <p>Logo</p>
+      <div class="user">
+        <i class="fa-solid fa-user"></i>
+        <p>John Due</p>
+      </div>
     </header>
 
     <input type="checkbox" id="openSidebarMenu" />
@@ -21,14 +25,36 @@
     </label>
 
     <sidebar>
-      <ul class="sidebarMenuInner">
-        <li><a href="https://vanila.io" target="_blank">Company</a></li>
+      <ul>
+        <li>
+          <button onclick="createTemplate('#t1')">o concurso</button>
+        </li>
+        <li>
+          <button onclick="createTemplate('#t2', getUsers())">
+            candidatos
+          </button>
+        </li>
       </ul>
     </sidebar>
 
-    <main>
-      <p>Main content</p>
-    </main>
-    
+    <template id="t1">
+      <h1>Titulo</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quibusdam,
+        facilis totam nihil ex vitae dolore quo, minima delectus eos laudantium
+        error eligendi nisi voluptatum ut fugiat tempore alias nobis!
+      </p>
+    </template>
+
+    <template id="t2">
+      <h1>Candidatos</h1>
+    </template>
+
+    <main></main>
   </body>
+  <script src="js/app.js"></script>
+  <script
+    src="https://kit.fontawesome.com/88c5d287fc.js"
+    crossorigin="anonymous"
+  ></script>
 </html>
