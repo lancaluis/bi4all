@@ -18,27 +18,32 @@
 
     <input type="checkbox" id="openSidebarMenu" />
 
+    <!-- Hamburguer -->
     <label for="openSidebarMenu" class="sidebarIconToggle">
       <div class="spinner diagonal part-1"></div>
       <div class="spinner horizontal"></div>
       <div class="spinner diagonal part-2"></div>
     </label>
 
-    <sidebar>
-      <ul>
-        <li>
-          <button onclick="createTemplate('#t1')">o concurso</button>
-        </li>
-        <li>
-          <button onclick="createTemplate('#t2', getUsers())">
-            candidatos
-          </button>
-        </li>
-        <li>
-          <button onclick="createTemplate('#t3', getWinners())">classificados</button>
-        </li>
-      </ul>
-    </sidebar>
+    <aside>
+      <nav>
+        <ul>
+          <li>
+            <button onclick="createTemplate('#t1')">o concurso</button>
+          </li>
+          <li>
+            <button onclick="createTemplate('#t2', getUsers())">
+              candidatos
+            </button>
+          </li>
+          <li>
+            <button onclick="createTemplate('#t3', getWinners())">
+              classificados
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </aside>
 
     <template id="t1">
       <h1>Sobre o concurso</h1>

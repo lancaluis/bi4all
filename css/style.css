@@ -28,7 +28,7 @@ header {
   color: var(--text-secondary-color);
 }
 
-sidebar {
+aside {
   height: 100%;
   position: fixed;
   right: 0;
@@ -39,17 +39,17 @@ sidebar {
   padding: 1rem 0;
 }
 
-sidebar ul {
+aside ul {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-sidebar ul li {
+aside ul li {
   width: 100%;
 }
 
-sidebar button {
+aside button {
   color: var(--text-secondary-color);
   font-size: 1rem;
   border: none;
@@ -59,7 +59,7 @@ sidebar button {
   width: 100%;
 }
 
-sidebar button:hover {
+aside button:hover {
   color: var(--text-secondary-color);
   transition: all 0.3s;
   cursor: pointer;
@@ -85,7 +85,7 @@ main li {
 }
 
 /* Hamburguer */
-input[type="checkbox"]:checked ~ sidebar {
+input[type="checkbox"]:checked ~ aside {
   transform: translateX(0);
 }
 
