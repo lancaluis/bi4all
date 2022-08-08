@@ -15,8 +15,9 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
-  background: #F47774;
+  background: #f47774;
   height: 60px;
+  color: #ffffff;
 }
 
 .user {
@@ -34,28 +35,30 @@ sidebar {
   width: 250px;
   transform: translateX(250px);
   transition: transform 250ms ease-in-out;
-  background: #F47774;
-  padding: 1rem 2rem;
+  background: #f47774;
+  padding: 1rem 0;
 }
 
 sidebar ul {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   flex-direction: column;
-  gap: 1rem;
 }
 
 sidebar button {
   color: #ffffff;
-  font-size: 1.1rem;
+  font-size: 1rem;
   border: none;
   background: none;
+  text-transform: uppercase;
+  padding: 0.7rem 0;
 }
 
-sidebar button:hover{
-  color: #261F3D;
-  transition: color 0.3s;
+sidebar button:hover {
+  color: #ffffff;
+  transition: all 0.3s;
   cursor: pointer;
+  background: #261f3d;
 }
 
 main {
@@ -70,6 +73,11 @@ main h1 {
   font-size: 1.5rem;
 }
 
+main li {
+  list-style: none;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
 
 /* Hamburguer */
 input[type="checkbox"]:checked ~ sidebar {
