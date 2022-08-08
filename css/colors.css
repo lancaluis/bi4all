@@ -1,3 +1,5 @@
 :root {
-  --text-dark-color: rgb(44, 44, 44);
+  --background-primary-color: #f47774;
+  --background-secondary-color: #261f3d; 
+  --text-secondary-color: #ffffff;
 }
